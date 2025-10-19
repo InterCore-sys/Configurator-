@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Configurator - Custom Build</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Custom Van Builder</h1>
+    </header>
+
+    <main>
+        <div class="config-visual">
+            <div id="van-image-placeholder">
+                <img src="base_van.png" alt="Base Van Model" id="van-visual">
+                <p>Note: Image would change with selected options (requires image assets).</p>
+            </div>
+            
+            <div class="price-display">
+                <h2>Total Price:</h2>
+                <p id="total-price">$30,999</p>
+            </div>
+        </div>
+
+        <div class="config-options">
+            <div class="option-section">
+                <h3>Exterior Color</h3>
+                <select id="color-select" data-price="0">
+                    <option value="Standard White" data-cost="0" selected>Standard White ($0)</option>
+                    <option value="Deep Blue" data-cost="500">Deep Blue (+$500)</option>
+                    <option value="Forest Green" data-cost="650">Forest Green (+$650)</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <div class="option-section">
+                <h3>Wheel Upgrade</h3>
+                <input type="checkbox" id="wheels-upgrade" data-cost="1200">
+                <label for="wheels-upgrade">Premium Alloy Wheels (+$1,200)</label>
+            </div>
+
+            <hr>
+
+            <div class="option-section">
+                <h3>Interior Package</h3>
+                <input type="radio" id="interior-standard" name="interior" value="Standard" data-cost="0" checked>
+                <label for="interior-standard">Standard Seating ($0)</label><br>
+                
+                <input type="radio" id="interior-comfort" name="interior" value="Comfort" data-cost="2500">
+                <label for="interior-comfort">Comfort Package (Leather, Heating) (+$2,500)</label><br>
+                
+                <input type="radio" id="interior-luxury" name="interior" value="Luxury" data-cost="4500">
+                <label for="interior-luxury">Luxury Package (Premium Audio, Mood Lighting) (+$4,500)</label>
+            </div>
+
+            <hr>
+
+            <div class="option-section">
+                <h3>Tech & Safety Features</h3>
+                <input type="checkbox" id="autopilot" data-cost="5000">
+                <label for="autopilot">Advanced Driver Assistance (+$5,000)</label><br>
+                
+                <input type="checkbox" id="infotainment" data-cost="1500">
+                <label for="infotainment">Large Infotainment Screen (+$1,500)</label>
+            </div>
+
+            <hr>
+
+            <div class="option-section">
+                <h3>Utility Upgrade</h3>
+                <input type="checkbox" id="roof-rack" data-cost="800">
+                <label for="roof-rack">Integrated Roof Rack (+$800)</label>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Base Price: $30,999</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
