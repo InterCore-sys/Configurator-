@@ -50,7 +50,23 @@ main {
     height: auto;
     display: none; /* Hide placeholder image */
 }
+#van-image-container { /* Renamed from #van-image-placeholder */
+    width: 100%;
+    max-width: 500px; /* Adjust as needed */
+    height: auto;
+    /* Remove background-color, border, and placeholder text related styling */
+    display: flex; /* Keep flex to center image if smaller */
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* Ensure container has a height */
+    margin-bottom: 20px;
+}
 
+#van-visual {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Make sure the image is visible */
+}
 .price-display {
     margin-top: 20px;
     padding: 15px;
